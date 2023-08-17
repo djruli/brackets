@@ -18,6 +18,13 @@ module.exports = function check(str, bracketsConfig) {
   str = str.split('')
   //console.log('length ' + str.length);
   let counter = 0;
+  for (let i = 0; i < str.length; i++){
+    for (let j = 0; j < compareSource.length; j = j + 2){  
+      if ((str[0] == compareSource[j] ) && str[2] == compareSource[j+1]){
+        return false;
+        }
+    }
+  }
 
     for (let i = 0; i < str.length; i++){
       for (let j = 0; j < compareSource.length; j = j + 2){
